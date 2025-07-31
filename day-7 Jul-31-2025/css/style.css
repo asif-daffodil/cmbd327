@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    display: block;
+    width: 300px;
+    height: 200px;
+    background: green;
+    margin: 20px auto;
+    position: relative;
+}
+
+.pain {
+    width: 150px;
+    height: 150px;
+    background: red;
+    position: absolute;
+    top: 25px;
+    left: 75px;
+    border-radius: 50%;
+}
+
+.a {
+    color: blue;
+    /* display: none; */
+    /* display: block; */
+    /* display: inline; */
+    display: inline-block;
+    background: lightblue;
+    padding: 20px;
+    width: 300px;
+}
+
+.table {
+    display: table;
+}
+
+.row {
+    display: table-row;
+}
+
+.col {
+    display: table-cell;
+    border: 1px solid #000;
+    padding: 6px 12px;
+}
+
+.cmbd {
+    width: 300px;
+    /* height: 100px; */
+    padding: 20px;
+    border: 1px solid #000;
+    margin: 20px auto;
+    /* overflow: hidden; */
+    /* overflow: scroll; */
+    /* overflow-x: scroll; */
+    /* overflow-y: hidden; */
+    /* overflow-y: scroll; */
+}
+
+.cmbd > p {
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+}
+
+/* .cmbd p */
+
+.box {
+    width: 300px;
+    border: 1px solid #000;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 20px;
+    /* box-sizing: content-box; */
+    box-shadow: 10px 10px 20px #000;
+    text-shadow: 1px 1px 1px blue;
+    font-weight: bold;
+}
+
+.dhanmondi + .mohammadpur {
+    background: red;
+}
+
+.dhanmondi ~ .kalabagan {
+    background: red;
+}

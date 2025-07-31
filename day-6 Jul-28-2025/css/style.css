@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.btn {
+    /* width: 150px; */
+    padding: 8px 20px;
+    margin: 20px;
+    border-width: 0;
+    background: cornflowerblue;
+    color: white;
+    border-radius: 20px/50%;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px black;
+    font-size: 22px;
+}
+
+.btn:hover {
+    background: green;
+    box-shadow: 5px 5px 10px black;
+}
+
+.link {
+    font-size: 22px;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: white;
+    background: cornflowerblue;
+    text-shadow: 2px 2px 2px black;
+    padding: 8px 20px;
+    border-radius: 20px/50%;
+}
+
+.link:hover {
+    background: green;
+    box-shadow: 5px 5px 10px black;
+}
+
+.cityList {
+    width: max-content;
+    margin: 40px;
+    /* list-style: upper-alpha; */
+    /* list-style-image: url("../images/tick.png"); */
+    /* list-style-position: inside; */
+    /* list-style: disc; */
+    font-size: 22px;
+    background: lightgray;
+    list-style-position: outside;
+    padding: 20px;
+}
+
+.cityList > li {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 6px;
+    font-family: "Roboto", sans-serif;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <!-- <form action="https://google.com/search" method="get">
+        <label for="fname">Search : </label>
+        <input type="search" placeholder="Search anything" id="fname" name="q">
+        <button type="submit">Submit</button>
+    </form> -->
+
+    <form action="">
+        <input type="text" placeholder="Your name" name="name">
+        <br><br>
+        <input type="email" placeholder="Your email" required minlength="6" maxlength="20" name="email">
+        <br><br>
+        <input type="url" placeholder="Web Address" name="url">
+        <br><br>
+        <input type="number" placeholder="Your Age" name="age">
+        <br><br>
+        <input type="password" placeholder="Your Password" name="password">
+        <br><br>
+        Gender : 
+        <label for="male">
+            <input type="radio" id="male" value="Male" name="gender"> Male
+        </label>
+        <label for="female">
+            <input type="radio" id="female" value="Female" name="gender"> Female
+        </label>
+        <label for="others">
+            <input type="radio" id="others" value="others" name="gender"> Others
+        </label>
+        <br><br>
+        Skills : 
+        <label for="html">
+            <input type="checkbox" id="html" value="HTML" name="skills">HTML
+        </label>
+        <label for="css">
+            <input type="checkbox" id="css" value="css" name="skills">CSS
+        </label>
+        <label for="js">
+            <input type="checkbox" id="js" value="JavaScript" name="skills">JavaScript
+        </label>
+        <br><br>
+        <label for="dob">
+            DOB :
+            <input type="date" name="dob" id="dob">
+        </label>
+        <br><br>
+        <label for="pp">
+            Upload your picture : 
+            <input type="file" name="profile_picture" id="pp">
+        </label>
+        <br><br>
+        <label for="color">
+            Favorite Color :
+            <input type="color" name="color" id="color">
+        </label>
+        <br><br>
+        <label for="range">
+            Range :
+            <input type="range" name="range" id="range">
+        </label>
+        <br><br>
+        <label for="country">
+            Country : 
+            <select name="country" id="country">
+                <option value="">--Select Country--</option>
+                <option value="Bangladesh">Bangladesh</option>
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="UK">UK</option>
+                <option value="Canada">Canada</option>
+                <option value="Others">Others</option>
+            </select>
+        </label>
+        <br><br>
+        <label for="comments">
+            Comments : <br>
+            <textarea name="comments" id="comments" cols="40" rows="6" placeholder="Write your comments here..."></textarea>
+        </label>
+        <br><br>
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
