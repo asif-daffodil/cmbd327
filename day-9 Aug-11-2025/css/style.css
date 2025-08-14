@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.bg-img {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000;
+    /* background: url("../images/sea.webp"); 
+    background-image: url("../images/sea.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; */
+    background: url("../images/sea.webp") no-repeat center /cover;
+    margin: 20px;
+}
+
+.bg-gradient {
+    border: 1px solid #000;
+    margin: 20px;
+    background: linear-gradient(to top right, black, blue, white, blue, black);
+}
+
+.bg-gradient2 {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000;
+    margin: 20px;
+    background: radial-gradient(white, black, blue);
+}
+
+.text-overflow {
+    width: 200px;
+    /* height: 200px; */
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* overflow-y: scroll; */
+
+    /* 
+    max-width: calc(100% - 40px);
+    min-width: 200px;
+    max-height: 200px;
+    min-height: 200px; 
+    */
+}
+
+.bg-color {
+    border: 1px solid #000;
+    margin: 20px;
+}
+
+@media (max-width: 768px) {
+    .bg-color {
+        width: 200px;
+        height: 200px;
+        /* background: blue; */
+        background-color: blue;
+    }
+    .bg-gradient {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+    .bg-color {
+        width: 300px;
+        height: 300px;
+        /* background: blue; */
+        background-color: green;
+    }
+    .bg-gradient {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .bg-color {
+        width: 400px;
+        height: 400px;
+        /* background: blue; */
+        background-color: red;
+    }
+    .bg-gradient {
+        width: 400px;
+        height: 400px;
+    }
+}
