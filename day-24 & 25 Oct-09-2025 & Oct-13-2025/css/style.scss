@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+    scroll-behavior: smooth;
+}
+
+button {
+    border-width: 0;
+    padding: 8px 16px;
+    background: #ccc;
+    border-radius: 16px/50%;
+    font-size: 18px;
+
+    &:hover {
+        background: limegreen;
+        color: #fff;
+        cursor: pointer;
+        text-shadow: 1px 1px 1px #000;
+    }
+}
+
+p {
+    font-style: italic;
+    color: #333;
+}
+
+h2 {
+    text-align: center;
+    color: lightgreen;
+    text-shadow: 1px 1px 1px #000;
+    margin: 20px 0;
+}
+
+.nav {
+    background: #ccc;
+
+    >ul {
+        list-style: none;
+        display: flex;
+
+        >li {
+            >a {
+                text-decoration: none;
+                color: #333;
+                line-height: 44px;
+                display: block;
+                font-variant: small-caps;
+                font-weight: 300;
+                font-size: 22px;
+            }
+
+            &:hover {
+                background: limegreen;
+
+                >a {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.hero {
+    display: flex;
+    gap: 16px;
+
+    >div {
+        &:first-child {
+            >h1 {
+                color: limegreen;
+                text-shadow: 2px 2px 2px #000;
+            }
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            gap: 16px;
+        }
+
+        &:last-child {
+            >img {
+                width: 100%;
+                max-height: 400px;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+.team {
+    display: grid;
+    gap: 16px;
+    >div {
+        text-align: center;
+        border: 1px solid #333;
+        border-radius: 8px;
+        padding: 16px;
+        >img {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #333;
+            border-radius: 50%;
+            aspect-ratio: 1/1;
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    background: #000;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 40px;
+    line-height: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    .nav {
+        max-width: 100%;
+        padding: 10px;
+
+        >ul {
+            display: none;
+            flex-direction: column;
+            align-items: start;
+
+            >li {
+                width: 100%;
+
+                >a {
+                    padding: 0 20px;
+
+                    >label {
+                        >#showNav {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        >ul.showNav {
+            display: block;
+        }
+
+        >.nav-btn {
+            padding: 8px;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+    }
+
+    .hero {
+        width: 100%;
+        padding: 12px;
+        flex-direction: column-reverse;
+    }
+
+    .team {
+        padding: 12px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .nav {
+        max-width: 1200px;
+        margin: 0 auto;
+
+        >ul {
+            justify-content: center;
+
+            >li {
+                >a {
+                    padding: 0 20px;
+                }
+            }
+        }
+
+        >.nav-btn {
+            display: none;
+        }
+    }
+
+    .hero {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 60px 0;
+
+        >div {
+            width: 50%;
+        }
+    }
+
+    .team {
+        max-width: 1200px;
+        margin: 0 auto;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+    <!-- Header Section Start -->
+    <nav id="nav" class="nav">
+        <button for="showNav" class="nav-btn" id="showNav">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul id="nav-links">
+            <li><a href="#nav">Home</a></li>
+            <li><a href="#team">Our Team</a></li>
+            <li><a href="#test">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <!-- Header Section End -->
+
+    <!-- Hero Section Start -->
+     <div class="hero">
+        <div>
+            <h1>This is a Heading</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, molestias esse voluptas inventore doloremque distinctio, pariatur quis eius a cumque nam voluptates nemo rerum animi mollitia optio ratione eaque iure enim accusamus magni illum quasi impedit! Consequatur maiores provident itaque.
+            </p>
+            <button>Read More</button>
+        </div>
+        <div>
+            <img src="./images/banner.jpg" alt="">
+        </div>
+     </div>
+    <!-- Hero Section End -->
+
+    <!-- Team Section Start -->
+    <h2>Our Team</h2>
+     <div class="team">
+        <div>
+            <img src="./images/asif.jpg" alt="">
+            <h3>Mr. Asif</h3>
+            <p>Our CEO</p>
+        </div>
+        <div>
+            <img src="./images/person-2.webp" alt="">
+            <h3>Mr. Asif</h3>
+            <p>Our MD</p>
+        </div>
+        <div>
+            <img src="./images/rasmus.jpg" alt="">
+            <h3>Mr. Rasmus</h3>
+            <p>Our Owner</p>
+        </div>
+     </div>
+    <!-- Team Section End -->
+     <footer>
+        &copy; 2025 | CMBD 327 | All Rights Reserved
+     </footer>
+    <!-- Footer Part Start -->
+
+    <script>
+        const showNav = document.getElementById('showNav');
+        const navLinks = document.getElementById('nav-links');
+
+        showNav.addEventListener('click', () => {
+            navLinks.classList.toggle('showNav');
+        });
+    </script>
+</body>
+
+</html>

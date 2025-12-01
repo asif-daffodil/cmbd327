@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <div class="w-full min-h-screen grid justify-center content-center gap-3">
+        <div class="w-64 border">
+            <div class="w-full border-b p-3 font-bold cursor-pointer aHead" id="q1">What is your name?</div>
+            <div class="p-3 hidden" id="ans1">
+                My name is Asif.
+            </div>
+        </div>
+        <div class="w-64 border">
+            <div class="w-full border-b p-3 font-bold cursor-pointer aHead" id="q2">What is your age?</div>
+            <div class="p-3 hidden" id="ans2">
+                I am 38.
+            </div>
+        </div>
+        <div class="w-64 border">
+            <div class="w-full border-b p-3 font-bold cursor-pointer aHead">What is your city?</div>
+            <div class="p-3 hidden"">
+                I live in Dhaka.
+            </div>
+        </div>
+    </div>
+    <div class="w-full min-h-screen grid justify-center content-center gap-3">
+        <img src="./images/pic_bulboff.gif" alt="" class="mx-auto block" id="bulbImg" />
+        <div>
+            <div class="flex justify-center items-center gap-3"></div>
+                <button
+                    type="button"
+                        class="px-4 py-2 rounded-md bg-green-500 text-white font-semibold shadow-sm hover:bg-green-600 active:scale-95 focus:outline-none focus:ring-2 focus:ring-green-300 transition"
+                        id="onBtn"
+                    >
+                        Turn on
+                    </button>
+
+                    <button
+                        type="button"
+                        class="px-4 py-2 rounded-md bg-red-500 text-white font-semibold shadow-sm hover:bg-red-600 active:scale-95 focus:outline-none focus:ring-2 focus:ring-red-300 transition"
+                        id="offBtn"
+                    >
+                        Turn off
+                    </button>
+                </div>
+            </div>
+        </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">
+        <p data-para="Ha ha ha" id="para1">This is a paragraph</p>
+    </div>
+    <button id="addParaBtn">Add Paragraph</button>
+    <button id="classToggleBtn">Class Toggle</button>
+
+    <!-- Event Bubbling -->
+
+        <div id="outerBtn" style="padding: 20px; background-color: lightblue;">
+            Outer Button
+            <button id="innerBtn" style="padding: 10px; background-color: lightgreen;">
+                Inner Button
+            </button>
+        </div>
+
+        <ul id="cityList">
+            <li>Dhaka</li>
+            <li>Rajshahi</li>
+            <li>Khulna</li>
+        </ul>
+
+    <script>
+        const div1 = document.getElementById('div1');
+        const para1 = document.getElementById('para1');
+        const addParaBtn = document.getElementById('addParaBtn');
+        const classToggleBtn = document.getElementById('classToggleBtn');
+
+        addParaBtn.addEventListener('click', () => {
+            const p = document.createElement('p');
+            p.textContent = "This is a new paragraph";
+            p.classList.add('new-para');
+            div1.appendChild(p);
+
+            const newParas = document.querySelectorAll('.new-para');
+            newParas.forEach(para => {
+                para.addEventListener('click', (e) => {
+                    e.target.remove();
+                });
+            });
+        });
+
+        para1.setAttribute('data-para', 'He he he');
+        console.log(para1.getAttribute('data-para'));
+        para1.classList.add('highlighted');
+        para1.classList.remove('highlighted');
+        console.log(para1.classList.contains('highlighted'));
+        classToggleBtn.addEventListener('click', () => {
+            para1.classList.toggle('highlighted');
+        });
+
+        const outerBtn = document.getElementById('outerBtn');
+        const innerBtn = document.getElementById('innerBtn');
+
+        outerBtn.addEventListener('click', (e) => {
+            console.log("Outer Button Clicked");
+        });
+
+        innerBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            e.preventDefault();
+            console.log("Inner Button Clicked");
+        });
+    </script>
+</body>
+</html>

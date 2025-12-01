@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="w-full h-screen grid place-items-center">
+        <div class="w-[215px] h-[466px] border rounded-2xl bg-white shadow-emerald-600 shadow-md overflow-hidden">
+            <div class="w-full text-center bg-[#00D09E] font-semibold text-[14px] h-[108px] grid place-items-center">
+                Welcome</div>
+            <div class="w-full h-[372.5px] bg-white rounded-t-2xl mt-[-16px] py-[45px] px-[18px]">
+                <form action="">
+                    <div class="mb-3">
+                        <label for="mobile" class="text-[13px]">Mobile Number</label>
+                        <input type="text" id="mobile"
+                            class="w-[178px] h-[21px] bg-[#DFF7E2] rounded-[18px] shadow-sm shadow-gray-300 text-xs px-3">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="text-[13px]">Password</label>
+                        <div class="relative">
+                            <input type="password" id="password"
+                                class="w-[178px] h-[21px] bg-[#DFF7E2] rounded-[18px] shadow-sm shadow-gray-300 text-xs px-3">
+                            <img src="/images/eye.png"
+                                class="absolute right-2 top-1/2 transform -translate-y-1/2 h-[6px] cursor-pointer"
+                                alt="" id="togglePassword">
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-[6px] justify-center items-center">
+                        <button class="bg-[#00D09E] font-semibold w-[105px] h-[23px] rounded-full text-xs cursor-pointer" type="submit">Log In</button>
+                        <button
+                            class="bg-[#DFF7E2] font-semibold w-[105px] h-[23px] rounded-full text-xs cursor-pointer"
+                            onclick="location.href='signup.html'" type="button">Sign Up</button>
+                        <a href="forgot-password.html" class="text-[8px] font-semibold text-[#093030]">Forget Password?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+    <script>
+        const togglePassword = document.getElementById('togglePassword');
+        const password = document.getElementById('password');
+        togglePassword.addEventListener('click', () => {
+            if (password.type === 'password') {
+                password.type = 'text';
+            } else {
+                password.type = 'password';
+            }
+        })
+    </script>
+</body>
+
+</html>

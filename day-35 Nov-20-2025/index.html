@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="multipleEvent">Single Event</button>
+    <div id="showComment"></div>
+    <form action="" id="commentForm">
+        <textarea name="comment" id="" placeholder="Your Comment..."></textarea>
+        <br>
+        <button>Submit</button>
+    </form>
+    <script>
+        const multipleEvent = document.getElementById('multipleEvent');
+        multipleEvent.addEventListener('click', (e) => {
+            const text = e.target.textContent;
+            if (text === 'Single Event') {
+                e.target.textContent = 'Multiple Event';
+            } else {
+                e.target.textContent = 'Single Event';
+            }
+        })
+
+        const commentForm = document.getElementById('commentForm');
+        const showComment = document.getElementById('showComment');
+
+        commentForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const formData = new FormData(commentForm);
+            const comment = formData.get('comment');
+            if (comment) {
+                const p = document.createElement('p');
+                p.textContent = comment;
+                showComment.appendChild(p);
+                commentForm.reset();
+            }
+        });
+
+        const myName = "Asif";
+        console.log("My name is " + myName);
+        console.log(`My name is ${myName}`);
+        // Muktikine Template Literal
+        const multiLine = `This is line one.
+This is line two.
+This is line three.`;
+        console.log(multiLine);
+
+        const numbers = [6, 55, 1, 78, 9, 45];
+        const sum = numbers.reduce((previous, current) => previous + current, 0);
+        console.log(sum);
+
+    </script>
+</body>
+</html>
